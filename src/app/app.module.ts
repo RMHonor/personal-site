@@ -9,22 +9,24 @@ import { HttpModule } from '@angular/http';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HeaderComponent} from './common/header/header.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent,
-    ContactComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpModule,
-    RouterModule.forRoot(rootRouterConfig)
-  ],
-  bootstrap: [ AppComponent ]
+    declarations: [
+        AppComponent,
+        AboutComponent,
+        HomeComponent,
+        ContactComponent,
+        HeaderComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpModule,
+        RouterModule.forRoot(rootRouterConfig)
+    ],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule {
 
