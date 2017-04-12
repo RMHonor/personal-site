@@ -9,7 +9,7 @@ import { HttpModule } from '@angular/http';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { HeaderComponent} from './common/header/header.component';
+import { SidenavComponent} from './common/sidenav/sidenav.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +17,7 @@ import { HeaderComponent} from './common/header/header.component';
         AboutComponent,
         HomeComponent,
         ContactComponent,
-        HeaderComponent
+        SidenavComponent
     ],
     imports: [
         BrowserModule,
