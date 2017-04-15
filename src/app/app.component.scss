@@ -1,0 +1,10 @@
+.body-container {
+    display: inline-block;
+    margin-left: 200px;
+}
+
+@media (max-width: 959px) {
+    .body-container {
+        margin-left: 0;
+    }
+}

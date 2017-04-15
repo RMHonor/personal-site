@@ -1,0 +1,47 @@
+@import '../../assets/style/settings/colours';
+
+.sidenav {
+    display: inline-block;
+    position: fixed;
+
+    width: 200px;
+    height: 100%;
+
+    background: $colour-primary;
+
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+
+    &__logo {
+        padding: 25px 20px;
+
+        &-wrapper {
+            background: linear-gradient(to bottom, $colour-primary-light 0%, rgba(0,0,0,.0));
+        }
+    }
+
+    &__heading {
+        font-size: 40px;
+        font-weight: 500;
+        text-shadow: 3px 3px 1px rgba(0, 0, 0, .2);
+        letter-spacing: 1px;
+        color: white;
+        text-align: center;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 165px;
+            height: 1px;
+            margin: 13px auto;
+            background-color: white;
+
+            box-shadow: 1px 1px rgba(0,0,0,.2);
+        }
+    }
+}
+
+@media (max-width: 959px) {
+    .sidenav {
+        display: none;
+    }
+}

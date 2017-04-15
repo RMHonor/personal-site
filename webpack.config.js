@@ -4,10 +4,10 @@ var webpackMerge = require('webpack-merge');
 
 // Webpack Config
 var webpackConfig = {
+    devtool: 'source-map',
     entry: {
         'main': './src/main.browser.ts',
     },
-
     output: {
         publicPath: '',
         path: path.resolve(__dirname, './dist'),
@@ -37,7 +37,9 @@ var webpackConfig = {
             },
             { test: /\.(scss|sass)$/, exclude: /node_modules/, loaders: ['raw-loader', 'sass-loader']},
             { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
-            { test: /\.html$/, loader: 'raw-loader' }
+            { test: /\.html$/, loader: 'raw-loader' },
+            { test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=assets/images/[name].[ext]'}
+
         ]
     }
 
