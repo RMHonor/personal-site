@@ -1,4 +1,6 @@
-<div class="sidenav">
+<div
+    class="sidenav"
+    [ngClass]="{'sidenav-show': spy.checked}">
     <div class="sidenav__logo-wrapper">
         <img src="./assets/images/logo.png" class="sidenav__logo"/>
     </div>
@@ -9,4 +11,12 @@
         </p>
     </div>
 
+
 </div>
+<div class="sidenav__menu-toggle">
+    <input type="checkbox" checked #spy [(ngModel)]="model"/>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+

@@ -7,4 +7,6 @@ import '../../assets/images/logo.png';
     templateUrl: './sidenav.component.html',
     styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent {}
+export class SidenavComponent {
+    public model: string;
+}
