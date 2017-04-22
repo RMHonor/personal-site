@@ -23,8 +23,6 @@
 <div
     class="sidenav__menu-toggle"
     (click)="toggleNav(!navSelected)">
-    <span [ngClass]="{'sidenav--toggled': navSelected}"></span>
-    <span [ngClass]="{'sidenav--toggled': navSelected}"></span>
-    <span [ngClass]="{'sidenav--toggled': navSelected}"></span>
+    <span *ngFor="let i of [0,1,2]" [ngClass]="{'sidenav--toggled': navSelected}"></span>
 </div>
 
