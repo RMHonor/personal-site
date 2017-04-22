@@ -1,12 +1,47 @@
-import { Component } from '@angular/core';
+import {Component, animate, style, transition, trigger, HostListener} from '@angular/core';
 
 import '../../assets/images/logo.png';
 
 @Component({
     selector: 'sidenav',
     templateUrl: './sidenav.component.html',
-    styleUrls: ['./sidenav.component.scss']
+    styleUrls: ['./sidenav.component.scss'],
+    animations: [
+        trigger(
+            'enterAnimation', [
+                transition(':enter', [
+                    style({transform: 'translateX(-100%)', opacity: 0}),
+                    animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+                ]),
+                transition(':leave', [
+                    style({transform: 'translateX(0)', opacity: 1}),
+                    animate('500ms', style({transform: 'translateX(-100%)', opacity: 0}))
+                ])
+            ]
+        )
+    ],
 })
 export class SidenavComponent {
-    public model: string;
+    private navSelected: boolean = false;
+    private showNav: boolean = true;
+
+    private readonly mobileWidth: number = 959;
+
+    ngOnInit() {
+        this.showNav = !this.isMobile();
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+        this.showNav = !this.isMobile() || this.navSelected;
+    }
+
+    isMobile() {
+        return window.innerWidth <= this.mobileWidth;
+    }
+
+    toggleNav(navSelected) {
+        this.navSelected = navSelected;
+        this.showNav = this.navSelected;
+    }
 }

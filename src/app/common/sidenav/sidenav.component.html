@@ -1,6 +1,7 @@
 <div
     class="sidenav"
-    [ngClass]="{'sidenav-show': spy.checked}">
+    *ngIf="showNav"
+    [@enterAnimation]>
     <div class="sidenav__logo-wrapper">
         <img src="./assets/images/logo.png" class="sidenav__logo"/>
     </div>
@@ -10,13 +11,20 @@
             Richard Honor
         </p>
     </div>
-
-
 </div>
-<div class="sidenav__menu-toggle">
-    <input type="checkbox" checked #spy [(ngModel)]="model"/>
-    <span></span>
-    <span></span>
-    <span></span>
+
+<div
+    class="sidenav__page-filter"
+    *ngIf="showNav"
+    (click)="toggleNav(false)"
+    [@enterAnimation]
+></div>
+
+<div
+    class="sidenav__menu-toggle"
+    (click)="toggleNav(!navSelected)">
+    <span [ngClass]="{'sidenav--toggled': navSelected}"></span>
+    <span [ngClass]="{'sidenav--toggled': navSelected}"></span>
+    <span [ngClass]="{'sidenav--toggled': navSelected}"></span>
 </div>
 
