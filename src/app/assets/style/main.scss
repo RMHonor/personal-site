@@ -1,2 +1,6 @@
 @import './generic/generic';
 @import './settings/settings';
+
+body {
+    background-color: $colour-background;
+}
