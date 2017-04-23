@@ -1,7 +1,7 @@
 <div
     class="sidenav"
     *ngIf="showNav"
-    [@enterAnimation]>
+    [@leftSlide]>
     <div class="sidenav__logo-wrapper">
         <img src="./assets/images/logo.png" class="sidenav__logo"/>
     </div>
@@ -17,7 +17,6 @@
     class="sidenav__page-filter"
     *ngIf="showNav"
     (click)="toggleNav(false)"
-    [@enterAnimation]
 ></div>
 
 <div

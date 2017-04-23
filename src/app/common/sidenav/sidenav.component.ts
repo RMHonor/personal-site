@@ -8,14 +8,14 @@ import '../../assets/images/logo.png';
     styleUrls: ['./sidenav.component.scss'],
     animations: [
         trigger(
-            'enterAnimation', [
+            'leftSlide', [
                 transition(':enter', [
-                    style({transform: 'translateX(-100%)', opacity: 0}),
-                    animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+                    style({transform: 'translateX(-100%)'}),
+                    animate('500ms', style({transform: 'translateX(0)'}))
                 ]),
                 transition(':leave', [
-                    style({transform: 'translateX(0)', opacity: 1}),
-                    animate('500ms', style({transform: 'translateX(-100%)', opacity: 0}))
+                    style({transform: 'translateX(0)'}),
+                    animate('500ms', style({transform: 'translateX(-100%)'}))
                 ])
             ]
         )
