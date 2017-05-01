@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var webpackMerge = require('webpack-merge');
+var SpritePlugin = require('sprite-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
@@ -22,6 +23,13 @@ var webpackConfig = {
                 // your Angular Async Route paths relative to this root directory
             }
         ),
+
+        new SpritePlugin({
+            source : __dirname + '/src/app/assets/images/sprites',
+            imgPath: __dirname + '/src/app/assets/images',
+            cssPath: __dirname + '/src/app/assets/style/generic',
+            processor: 'scss'
+        })
     ],
 
     module: {
@@ -35,14 +43,17 @@ var webpackConfig = {
                     'angular2-router-loader'
                 ]
             },
-            { test: /\.(scss|sass)$/, exclude: /node_modules/, loaders: ['raw-loader', 'sass-loader']},
+            { test: /\.(scss|sass)$/, exclude: /node_modules/, loaders: ['to-string-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']},
             { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
             { test: /\.html$/, loader: 'raw-loader' },
             { test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=assets/images/[name].[ext]'}
 
         ]
-    }
+    },
 
+    resolve: {
+        modules: ["node_modules"]
+    }
 };
 
 

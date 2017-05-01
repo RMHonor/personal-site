@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SidenavComponent} from './common/sidenav/sidenav.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { SidenavComponent} from './common/sidenav/sidenav.component';
         AboutComponent,
         HomeComponent,
         ContactComponent,
-        SidenavComponent
+        SidenavComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,

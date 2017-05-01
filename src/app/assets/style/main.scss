@@ -1,6 +1,9 @@
 @import './generic/generic';
 @import './settings/settings';
+@import './page/page';
 
 body {
+    position: relative;
+    min-height: 100%;
     background-color: $colour-background;
 }
