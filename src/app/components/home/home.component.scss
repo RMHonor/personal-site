@@ -1,4 +1,5 @@
 @import '../../assets/style/settings/colours';
+@import '../../assets/style/settings/shadow';
 
 $mobile-break: 750px;
 .splash {
@@ -39,6 +40,8 @@ $mobile-break: 750px;
         overflow: hidden;
 
         background: no-repeat center url('../../assets/images/self.jpg');
+
+        @include shadow(3);
 
         //&:before {
         //    content: '';
