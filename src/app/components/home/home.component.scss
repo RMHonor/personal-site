@@ -41,7 +41,7 @@ $mobile-break: 750px;
 
         background: no-repeat center url('../../assets/images/self.jpg');
 
-        @include shadow(3);
+        @include shadow(8);
 
         //&:before {
         //    content: '';
