@@ -38,6 +38,7 @@
     "angular2-router-loader": "^0.3.4",
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^2.2.4",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "node-sass": "^4.5.2",
     "raw-loader": "^0.5.1",

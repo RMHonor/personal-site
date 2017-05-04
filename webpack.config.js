@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var path = require('path');
 var webpackMerge = require('webpack-merge');
 var SpritePlugin = require('sprite-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
@@ -23,6 +24,9 @@ var webpackConfig = {
                 // your Angular Async Route paths relative to this root directory
             }
         ),
+
+        // new webpack.optimize.CommonsChunkPlugin('commons', 'common.js'),
+        new ExtractTextPlugin("[name].css"),
 
         new SpritePlugin({
             source : __dirname + '/src/app/assets/images/sprites',
