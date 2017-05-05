@@ -6,8 +6,11 @@ $mobile-break: 750px;
     text-align: center;
 
     &__header {
+        display: inline-block;
         font-size: 45px;
         margin: 34px 0;
+        padding: 10px 40px;
+        @include shadow(8);
 
         &:before, &:after {
             content: '';
@@ -20,19 +23,86 @@ $mobile-break: 750px;
         }
     }
 
+    &__image-table {
+        display: flex;
+
+        flex-flow: row wrap;
+
+        align-items: center;
+    }
+
+    &__self-img-wrapper {
+
+        flex: 2 100%;
+
+        @media (min-width: 768px){
+            flex: 2 0;
+        }
+    }
+
     &__self-img {
         $diameter: 300px;
+        $diameterMobile: 90vw;
 
         width: $diameter;
         height: $diameter;
+        
+        @media (max-width: 340px){
+            width: $diameterMobile;
+            height: $diameterMobile;
+        }
+
+
+        margin: 0 auto;
         border-radius: 100%;
         border: 3px solid $colour-primary-light;
-        position: relative;
-        padding: 8px;
-        overflow: hidden;
-
         background: no-repeat center url('../../assets/images/self.jpg');
 
+        @include shadow(16);
+    }
+
+    &__github-img-wrapper, &__linkedin-img-wrapper {
+        flex: 1 auto;
+    }
+
+    &__github-img, &__linkedin-img {
+        $diameter: 150px;
+        $diameterMobile: 45vw;
+
+        width: $diameter;
+        height: $diameter;
+
+        @media (max-width: 340px){
+            width: $diameterMobile;
+            height: $diameterMobile;
+        }
+
+
+        margin: 0 auto;
+
+        background-size: 100%;
+
+        border-radius: 100%;
+        border: 3px solid $colour-primary-light;
+
         @include shadow(8);
+    }
+
+    &__github-img {
+        background: no-repeat center/90% url('../../assets/images/github.png');
+    }
+
+    &__linkedin-img {
+        background: no-repeat center/70% url('../../assets/images/linkedin.png');
+    }
+
+    @media (min-width: 768px) {
+        &__github-img-wrapper, &__linkedin-img-wrapper {
+            flex: 1 auto;
+        }
+
+        &__github-img-wrapper{
+            order: -1;
+        }
     }
 }
