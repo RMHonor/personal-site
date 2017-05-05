@@ -35,21 +35,21 @@ $mobile-break: 750px;
 
         flex: 2 100%;
 
-        @media (min-width: 768px){
+        @media (min-width: $mobile-break){
             flex: 2 0;
         }
     }
 
     &__self-img {
         $diameter: 300px;
-        $diameterMobile: 90vw;
+        $diameter-mobile: 90vw;
 
         width: $diameter;
         height: $diameter;
 
         @media (max-width: 340px){
-            width: $diameterMobile;
-            height: $diameterMobile;
+            width: $diameter-mobile;
+            height: $diameter-mobile;
         }
 
 
@@ -67,14 +67,14 @@ $mobile-break: 750px;
 
     &__github-img, &__linkedin-img {
         $diameter: 150px;
-        $diameterMobile: 45vw;
+        $diameter-mobile: 45vw;
 
         width: $diameter;
         height: $diameter;
 
         @media (max-width: 340px){
-            width: $diameterMobile;
-            height: $diameterMobile;
+            width: $diameter-mobile;
+            height: $diameter-mobile;
         }
 
 
@@ -96,7 +96,7 @@ $mobile-break: 750px;
         background: no-repeat center/70% url('../../assets/images/linkedin.png');
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $mobile-break) {
         &__github-img-wrapper, &__linkedin-img-wrapper {
             flex: 1 auto;
         }
