@@ -3,13 +3,30 @@
 
 $mobile-break: 750px;
 .splash {
-    text-align: center;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 
     &__header {
+        &-wrapper {
+            order: -2;
+            flex: 2 100%;
+            text-align: center;
+        }
+
         display: inline-block;
         font-size: 45px;
-        margin: 34px 0;
-        padding: 10px 40px;
+
+        @media (max-width: $mobile-break) {
+            font-size: 38px;
+        }
+
+        margin: 34px auto;
+        padding: 10px 30px;
+
+        max-width: 90%;
+
         @include shadow(8);
 
         &:before, &:after {
@@ -23,24 +40,16 @@ $mobile-break: 750px;
         }
     }
 
-    &__image-table {
-        display: flex;
-
-        flex-flow: row wrap;
-
-        align-items: center;
-    }
-
-    &__self-img-wrapper {
-
-        flex: 2 100%;
-
-        @media (min-width: $mobile-break){
-            flex: 2 0;
-        }
-    }
-
     &__self-img {
+
+        &-wrapper {
+            flex: 2 100%;
+
+            @media (min-width: $mobile-break){
+                flex: 2 0;
+            }
+        }
+
         $diameter: 300px;
         $diameter-mobile: 90vw;
 
