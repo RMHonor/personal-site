@@ -1,16 +1,15 @@
 {
-  "name": "angular2-seed",
+  "name": "rhonor-personal-site",
   "version": "1.0.0",
-  "description": "A simple starter Angular2 project",
+  "description": "Portfolio/CV site written in Angular2",
   "scripts": {
     "build": "webpack --progress",
     "watch": "npm run build -- --watch",
-    "server": "webpack-dev-server --inline --progress --port 3000 --content-base src",
+    "server": "webpack-dev-server --inline --progress --port 5000 --content-base src",
     "start": "npm run server"
   },
   "contributors": [
-    "Rob Wormald <robwormald@gmail.com>",
-    "PatrickJS <github@gdi2290.com>"
+    "Richard Honor <me@r-honor.uk>"
   ],
   "license": "MIT",
   "dependencies": {
@@ -54,17 +53,17 @@
     "webpack-merge": "^0.15.0"
   },
   "keywords": [
-    "Angular2",
-    "angular2-seed",
-    "official angular 2 seed",
-    "official angular2 seed"
+    "Richard Honor",
+    "RHonor",
+    "RMHonor",
+    "Front end developer"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angular/angular2-seed.git"
+    "url": "git+https://github.com/RMHonor/personal-site.git"
   },
   "bugs": {
-    "url": "https://github.com/angular/angular2-seed/issues"
+    "url": "https://github.com/RMHonor/personal-site/issues"
   },
-  "homepage": "https://github.com/angular/angular2-seed#readme"
+  "homepage": "https://github.com/RMHonor/personal-site#readme"
 }
