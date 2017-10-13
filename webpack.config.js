@@ -7,9 +7,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
-    devtool: 'source-map',
+    context: path.resolve(__dirname, './src'),
     entry: {
-        'main': './src/main.browser.ts',
+        'main': './main.browser.ts'
     },
     output: {
         filename: '[name].[hash].js',
@@ -19,7 +19,7 @@ var webpackConfig = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './index.html',
             inject: 'body'
         }),
         new webpack.ContextReplacementPlugin(
@@ -74,7 +74,8 @@ var defaultConfig = {
     output: {
         filename: '[name].bundle.js',
         sourceMapFilename: '[name].map',
-        chunkFilename: '[id].chunk.js'
+        chunkFilename: '[id].chunk.js',
+        publicPath: '/'
     },
 
     resolve: {
@@ -84,7 +85,7 @@ var defaultConfig = {
 
     devServer: {
         historyApiFallback: true,
-        watchOptions: { aggregateTimeout: 300, poll: 1000 },
+        contentBase: './',
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
@@ -107,8 +108,8 @@ var defaultConfig = {
 var prodConfig = {
     output: {
         filename: '[name].bundle.js',
-        sourceMapFilename: '[name].map',
-        chunkFilename: '[id].chunk.js'
+        chunkFilename: '[id].chunk.js',
+        publicPath: '/'
     },
 
     resolve: {
