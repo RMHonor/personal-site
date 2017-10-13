@@ -129,9 +129,8 @@ var prodConfig = {
     }
 };
 
-
-if (process.env === 'production') {
-    module.exports = webpackMerge(defaultConfig, webpackConfig);
-} else {
+if (process.env.NODE_ENV === 'production') {
     module.exports = webpackMerge(prodConfig, webpackConfig);
+} else {
+    module.exports = webpackMerge(defaultConfig, webpackConfig);
 }
