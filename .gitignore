@@ -2,3 +2,6 @@
 /dist/
 /npm-debug.log
 /.idea/*
+/.idea/
+/src/app/assets/images/sprite-base.png
+/src/app/assets/style/generic/sprite-base.scss

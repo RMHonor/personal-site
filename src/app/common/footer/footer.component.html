@@ -1,0 +1,16 @@
+<div class="footer">
+    <div class="footer__social-media">
+        <a
+            class="footer__social-media-link"
+            *ngFor="let item of social"
+            href="{{ item.link }}"
+            target="_blank">
+            <div class="icon-{{ item.icon }}"></div>
+        </a>
+        <!--<div class="icon-linkedin"></div>-->
+    </div>
+    <p class="footer__text">
+        ©{{getYear()}} Richard Honor
+    </p>
+</div>
+

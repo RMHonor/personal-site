@@ -1,0 +1,123 @@
+@import '../../assets/style/settings/colours';
+@import '../../assets/style/settings/shadow';
+
+$mobile-break: 750px;
+.splash {
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    &__header {
+        &-wrapper {
+            order: -2;
+            flex: 2 100%;
+            text-align: center;
+        }
+
+        display: inline-block;
+        font-size: 45px;
+
+        @media (max-width: $mobile-break) {
+            font-size: 38px;
+        }
+
+        margin: 34px auto;
+        padding: 10px 30px;
+
+        max-width: 90%;
+
+        @include shadow(8);
+
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 30%;
+            height: 2px;
+            margin: 2px auto;
+
+            background-color: white;
+        }
+    }
+
+    &__intro {
+        max-width: 85%;
+        margin: 0 auto 30px auto;
+        font-size: 18px;
+    }
+
+    &__self-img {
+
+        &-wrapper {
+            flex: 2 100%;
+
+            @media (min-width: $mobile-break){
+                flex: 2 0;
+            }
+        }
+
+        $diameter: 300px;
+        $diameter-mobile: 90vw;
+
+        width: $diameter;
+        height: $diameter;
+
+        @media (max-width: 340px){
+            width: $diameter-mobile;
+            height: $diameter-mobile;
+        }
+
+
+        margin: 0 auto;
+        border-radius: 100%;
+        border: 3px solid $colour-primary-light;
+        background: no-repeat center/100% url('../../assets/images/self.jpg');
+
+        @include shadow(16);
+    }
+
+    &__github-img-wrapper, &__linkedin-img-wrapper {
+        flex: 1 auto;
+    }
+
+    &__side-img {
+        $diameter: 150px;
+        $diameter-mobile: 45vw;
+
+        width: $diameter;
+        height: $diameter;
+
+        @media (max-width: 340px){
+            width: $diameter-mobile;
+            height: $diameter-mobile;
+        }
+
+
+        margin: 20px auto;
+
+        background-size: 100%;
+
+        border-radius: 100%;
+        border: 3px solid $colour-primary-light;
+
+        @include shadow(8);
+    }
+
+    &__github-img {
+        background: no-repeat center/90% url('../../assets/images/github.png');
+    }
+
+    &__linkedin-img {
+        background: no-repeat center/70% url('../../assets/images/linkedin.png');
+    }
+
+    @media (min-width: $mobile-break) {
+        &__github-img-wrapper, &__linkedin-img-wrapper {
+            flex: 1 auto;
+        }
+
+        &__github-img-wrapper{
+            order: -1;
+        }
+    }
+}

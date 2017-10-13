@@ -3,7 +3,7 @@
     *ngIf="showNav"
     [@leftSlide]>
     <div class="sidenav__logo-wrapper">
-        <img src="./assets/images/logo.png" class="sidenav__logo"/>
+        <img src="../../assets/images/logo.png" class="sidenav__logo"/>
     </div>
 
     <div>
@@ -11,6 +11,32 @@
             Richard Honor
         </p>
     </div>
+    <ul class="sidenav__list">
+        <li
+            class="sidenav__link"
+            routerLink="/home"
+            routerLinkActive="sidenav__link--active"
+            (click)="toggleNav(false)"
+        >
+            Home
+        </li>
+        <li
+            class="sidenav__link"
+            routerLink="/skills"
+            routerLinkActive="sidenav__link--active"
+            (click)="toggleNav(false)"
+        >
+            Skills
+        </li>
+        <li
+            class="sidenav__link"
+            routerLink="/contact"
+            routerLinkActive="sidenav__link--active"
+            (click)="toggleNav(false)"
+        >
+            Contact
+        </li>
+    </ul>
 </div>
 
 <div

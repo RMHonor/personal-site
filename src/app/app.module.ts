@@ -6,18 +6,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { AboutComponent } from './components/about/about.component';
+import { SkillsComponent } from './components/skills/skills.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SidenavComponent} from './common/sidenav/sidenav.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        AboutComponent,
+        SkillsComponent,
         HomeComponent,
         ContactComponent,
-        SidenavComponent
+        SidenavComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
