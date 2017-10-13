@@ -41,7 +41,9 @@ export class SidenavComponent {
     }
 
     toggleNav(navSelected) {
-        this.navSelected = navSelected;
-        this.showNav = this.navSelected;
+        if (this.isMobile()){
+            this.navSelected = navSelected;
+            this.showNav = this.navSelected;
+        }
     }
 }
