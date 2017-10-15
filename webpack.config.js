@@ -3,6 +3,7 @@ var path = require('path');
 var webpackMerge = require('webpack-merge');
 var SpritePlugin = require('sprite-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
@@ -20,6 +21,15 @@ var webpackConfig = {
         new HtmlWebpackPlugin({
             template: './index.html',
             inject: 'body'
+        }),
+        new FaviconsWebpackPlugin({
+            logo: './app/assets/images/logo.png',
+            icons: {
+                favicons: true,
+                firefox: true,
+                opengraph: true,
+                twitter: true
+            }
         }),
         new webpack.ContextReplacementPlugin(
             // The (\\|\/) piece accounts for path separators in *nix and Windows
