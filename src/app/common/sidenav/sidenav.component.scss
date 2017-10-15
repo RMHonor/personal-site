@@ -41,6 +41,19 @@
         }
     }
 
+    &__link {
+        color: white;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+        font-size: 24px;
+        text-align: center;
+        padding: 3px;
+        cursor: pointer;
+
+        &--active, &:hover {
+            background-color: $colour-primary-light;
+        }
+    }
+
     &__menu-toggle {
         display: none;
         position: absolute;
