@@ -22,6 +22,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 html {
@@ -86,4 +87,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] {
     -moz-appearance:textfield;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+div[class^='.col-sm-*'] {
+
 }
