@@ -4,11 +4,13 @@
     </h1>
 </div>
 
-<div class="technology-section" *ngFor="let group of technologyGroups">
-    <h2>{{group.header}}</h2>
-    <h3>{{group.subHeader}}</h3>
-    <div class="technology-group" *ngFor="let tech of group.technologies">
-        <img class="technology-group__image" src="{{tech.image}}" alt="{{tech.name}}">
-        <span class="technology-group__text">{{tech.name}}</span>
+<div class="technology-section row" *ngFor="let group of technologyGroups">
+    <h2 class="technology-section__header">{{group.header}}</h2>
+    <p class="technology-section__intro">{{group.subHeader}}</p>
+    <div class="technology-group col-lg-2 col-sm-3 col-xs-6" *ngFor="let tech of group.technologies">
+        <div class="technology-group__image icon-{{tech.image}}"></div>
+        <p class="technology-group__text">{{tech.name}}</p>
     </div>
 </div>
+
+<footer></footer>

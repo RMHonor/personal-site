@@ -1,3 +1,44 @@
-.test {
-    color: red;
+@import '../../assets/style/settings/shadow';
+
+.technology-group {
+    padding: 10px 0;
+    margin-bottom: 10px;
+
+    &__image {
+        height: 120px;
+        width: 120px;
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    &:hover {
+        @include shadow(4);
+    }
+}
+
+.technology-section {
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    &__header {
+        display: inline;
+        padding: 5px 10px;
+        margin: 10px;
+        font-size: 25px;
+        @include shadow(8);
+    }
+
+    &__intro {
+        margin: 20px 10px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 50px;
+    }
 }
