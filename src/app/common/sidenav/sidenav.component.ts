@@ -27,6 +27,21 @@ export class SidenavComponent {
 
     private readonly mobileWidth: number = 959;
 
+    links = [
+        {
+            route: '/home',
+            name: 'Home',
+        },
+        {
+            route: '/skills',
+            name: 'Skills',
+        },
+        {
+            route: '/contact',
+            name: 'Contact',
+        },
+    ];
+
     ngOnInit() {
         this.showNav = !this.isMobile();
     }
