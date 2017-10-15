@@ -3,18 +3,9 @@
 
 $mobile-break: 750px;
 .splash {
-
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    text-align: center;
 
     &__header {
-        &-wrapper {
-            order: -2;
-            flex: 2 100%;
-            text-align: center;
-        }
-
         display: inline-block;
         font-size: 45px;
 
@@ -22,7 +13,7 @@ $mobile-break: 750px;
             font-size: 38px;
         }
 
-        margin: 34px auto;
+        margin: 34px auto 34px auto;
         padding: 10px 30px;
 
         max-width: 90%;
@@ -44,6 +35,13 @@ $mobile-break: 750px;
         max-width: 85%;
         margin: 0 auto 30px auto;
         font-size: 18px;
+    }
+
+    &__images {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-bottom: 50px;
     }
 
     &__self-img {

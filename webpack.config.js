@@ -2,7 +2,6 @@ var webpack = require('webpack');
 var path = require('path');
 var webpackMerge = require('webpack-merge');
 var SpritePlugin = require('sprite-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Webpack Config
@@ -32,7 +31,6 @@ var webpackConfig = {
         ),
 
         // new webpack.optimize.CommonsChunkPlugin('commons', 'common.js'),
-        new ExtractTextPlugin("[name].css"),
 
         new SpritePlugin({
             source : __dirname + '/src/app/assets/images/sprites',
@@ -53,7 +51,7 @@ var webpackConfig = {
                     'angular2-router-loader'
                 ]
             },
-            { test: /\.(scss|sass)$/, exclude: /node_modules/, loaders: ['to-string-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']},
+            { test: /\.(scss|sass)$/, exclude: /node_modules/, loaders: ['to-string-loader', 'css-loader?sourceMap', 'resolve-url-loader', 'sass-loader?sourceMap']},
             { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
             { test: /\.html$/, loader: 'raw-loader' },
             { test: /\.(jpe?g|png|gif)$/i, loader: 'file-loader?name=assets/images/[name].[ext]'}
