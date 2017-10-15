@@ -36,10 +36,10 @@ export class SidenavComponent {
             route: '/skills',
             name: 'Skills',
         },
-        {
-            route: '/contact',
-            name: 'Contact',
-        },
+        // {
+        //     route: '/contact',
+        //     name: 'Contact',
+        // },
     ];
 
     ngOnInit() {
