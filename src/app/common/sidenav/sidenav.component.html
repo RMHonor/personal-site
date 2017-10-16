@@ -13,28 +13,13 @@
     </div>
     <ul class="sidenav__list">
         <li
+            *ngFor="let link of links"
             class="sidenav__link"
-            routerLink="/home"
+            routerLink="{{link.route}}"
             routerLinkActive="sidenav__link--active"
             (click)="toggleNav(false)"
         >
-            Home
-        </li>
-        <li
-            class="sidenav__link"
-            routerLink="/skills"
-            routerLinkActive="sidenav__link--active"
-            (click)="toggleNav(false)"
-        >
-            Skills
-        </li>
-        <li
-            class="sidenav__link"
-            routerLink="/contact"
-            routerLinkActive="sidenav__link--active"
-            (click)="toggleNav(false)"
-        >
-            Contact
+            {{link.name}}
         </li>
     </ul>
 </div>
