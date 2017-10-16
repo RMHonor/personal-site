@@ -5,9 +5,10 @@ import CustomValidators from '../forms/CustomValidators';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact-component.css']
+  styleUrls: ['./contact-component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
+  title: string = 'Contact';
   contactForm: FormGroup;
   constructor(private formBuilder: FormBuilder) {}
 
