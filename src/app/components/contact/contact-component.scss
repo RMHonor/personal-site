@@ -12,3 +12,19 @@
 .form-content textarea.sd-form-control {
   max-width: 100%;
 }
+
+.contact-page {
+    &__icon {
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    &__link {
+        display: block;
+        text-align: center;
+    }
+
+    &__item-container {
+        margin-bottom: 50px;
+    }
+}
